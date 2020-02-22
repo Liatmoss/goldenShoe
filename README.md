@@ -2,7 +2,7 @@
 
 ## User Stories
 
-``
+```
 As a customer,
 So that I can find what I'm looking for,
 I want to have some shoes displayed on the homepage
@@ -22,4 +22,3 @@ I want to add a discount code at checkout
 As a customer,
 So I can't buy shoes that are out of stock
 I want to see what shoes are in or out of stock
-``
