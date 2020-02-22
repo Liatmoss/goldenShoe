@@ -22,3 +22,7 @@ I want to add a discount code at checkout
 As a customer,
 So I can't buy shoes that are out of stock
 I want to see what shoes are in or out of stock
+
+As a customer,
+So I can browse on my phone or tablet
+I want the website to be responsive to the screen size
