@@ -53,11 +53,11 @@ footer {
 
 .contact1 {
   /* color: #9e203e; */
-  color: black;
+  color: white;
 }
 
 .contact1:hover {
-  color: #9e203e;
+  color: #eeecef;
 }
 
 .fa {
