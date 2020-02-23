@@ -51,10 +51,6 @@ footer {
   position: relative;
 }
 
-.contact1 {
-  /* color: #9e203e; */
-  color: white;
-}
 
 .contact1:hover {
   color: #eeecef;
