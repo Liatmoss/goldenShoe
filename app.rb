@@ -1,12 +1,11 @@
-require 'sinatra'
+require 'sinatra/base'
 
 class GoldenShoe < Sinatra::Base
 
 enable :sessions
 
   get '/' do
-  'Hello'
-    # erb :index
+    erb :index
   end
 
 

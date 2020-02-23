@@ -1,0 +1,41 @@
+/* h1 {
+  font-family: 'Acme', sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  text-align: center;
+  color: #FFCE26;
+  padding-top: 10px;
+  letter-spacing: 0.1em;
+  margin: 0;
+} */
+
+.navbar {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Acme', sans-serif;
+  font-size: 20px;
+  background-color: #FFCE26;
+}
+
+.navbar-nav {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: right;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  font-weight: 1000;
+  color: #7c606e;
+}
+
+.navbar-collapse{
+  color: #0b0b0c;
+}
+
+body {
+  background-color: #eeecef;
+}
