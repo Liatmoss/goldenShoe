@@ -8,10 +8,6 @@ So that I can find what I'm looking for,
 I want to have some shoes displayed on the homepage
 
 As a customer,
-So that I can search for what I want,
-I want to be able to search for a particular shoe
-
-As a customer,
 So that I can buy shoes,
 I want to be able to add shoes to my basket
 
