@@ -1,4 +1,5 @@
 require_relative 'db_connection.rb'
+require 'dotenv/load'
 
 class User
   attr_reader :email, :fullname, :password, :id
@@ -11,8 +12,9 @@ class User
   end
 
   def self.add(fullname:, email:, password:)
+    print(ENV["DB_NAME"])
     DbConnection.setup(ENV["DB_NAME"])
-    result = DbConnection.query("INSERT INTO GOLDENSHOE_USER (fullname, email, password) VALUES ('#{fullname}', '#{email}', '#{password}') RETURNING id, fullname, email, password;")
+    result = DbConnection.query("INSERT INTO goldenshoe_user (fullname, email, password) VALUES ('#{fullname}', '#{email}', '#{password}') RETURNING id, fullname, email, password;")
     User.new(id: result[0]['id'], fullname: result[0]['fullname'], email: result[0]['email'], password: result[0]['password'])
   end
 
