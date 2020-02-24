@@ -11,7 +11,19 @@ enable :sessions
   end
 
   get '/login' do
+    @password_invalid = false
     erb :login
+  end
+
+  post '/login' do
+    @user = User.authenticate(email: params['email'], password: params['password'])
+    if @user
+      session[:signed_in?] = true
+      redirect '/'
+    else
+        @password_invalid = true
+        erb :'login'
+    end
   end
 
   get '/signup' do
