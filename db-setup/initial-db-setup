@@ -1,0 +1,14 @@
+# setup dev DB
+CREATE DATABASE "goldenshoe-dev";
+
+\c goldenshoe-dev;
+
+# setup test DB
+CREATE DATABASE "goldenshoe-test";
+
+\c goldenshoe-test;
+
+
+# Table create statements RUN IN ORDER!!!!
+
+CREATE TABLE GOLDENSHOE_USER (id SERIAL PRIMARY KEY, fullname VARCHAR(60),email VARCHAR(60), password VARCHAR(60), address VARCHAR(100), basket VARCHAR(200), gdpr BOOLEAN DEFAULT FALSE);
