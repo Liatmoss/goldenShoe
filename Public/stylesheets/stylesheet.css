@@ -37,7 +37,7 @@ a.nav-link {
   color: white;
 }
 
-a.signup {
+a.signup-link {
   color: black;
 }
 
@@ -51,7 +51,7 @@ a.navbar-brand:hover {
   color: #eeecef;
 }
 
-a.signup:hover {
+a.signup-link:hover {
   font-weight: 1000;
   color: gray;
 }
