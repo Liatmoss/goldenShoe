@@ -20,4 +20,11 @@ class Shoe
      Shoe.new(id: shoes["id"], shoe_name: shoes["shoe_name"], shoe_colour: shoes["shoe_colour"], shoe_size: shoes["shoe_size"], shoe_description: shoes["shoe_description"], shoe_stock: shoes["shoe_stock"])
      end
   end
+
+  def self.where(shoe_name:, shoe_stock:)
+    DbConnection.setup(ENV["DB_NAME"])
+    DbConnection.query("SELECT * FROM GOLDENSHOE_SHOES WHERE shoe_name = #{shoe_name} AND shoe_stock = #{shoe_stock};")
+     Shoe.new(id: shoes["id"], shoe_name: shoes["shoe_name"], shoe_colour: shoes["shoe_colour"], shoe_size: shoes["shoe_size"], shoe_description: shoes["shoe_description"], shoe_stock: shoes["shoe_stock"])
+   end
+
 end

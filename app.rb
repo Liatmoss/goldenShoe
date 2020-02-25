@@ -43,8 +43,8 @@ enable :sessions
     redirect '/'
   end
 
-  get '/womens/heels/1' do
-    "Hello World"
+  get '/heel1' do
+    erb :heel1
   end
 
   run! if app_file == $0
