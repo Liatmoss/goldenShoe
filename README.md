@@ -7,6 +7,10 @@ As a business owner,
 So that I can save my customer's details,
 I want my customers to have the option of signing in
 
+As a business owner,
+So I can see what stock has sold out,
+I want to see a list of shoes with a stock count of zero
+
 As a customer,
 So I can browse on my phone or tablet
 I want the website to be responsive to the screen size
