@@ -26,3 +26,19 @@ I want to be able to add shoes to my basket
 As a customer,
 So I can get a discount on my order,
 I want to add a discount code at checkout
+```
+
+## Running the Program
+
+### Gems to Install:
+
+- gem 'rake'
+- gem 'rspec'
+- gem 'sinatra'
+- gem 'capybara'
+- gem 'pg'
+- gem 'dotenv'
+
+### Database Setup:
+
+Follow instructions in db-setup
