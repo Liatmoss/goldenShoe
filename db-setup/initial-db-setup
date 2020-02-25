@@ -9,6 +9,8 @@ CREATE DATABASE "goldenshoe-test";
 \c goldenshoe-test;
 
 
-# Table create statements RUN IN ORDER!!!!
+# Table create statements RUN IN ORDER
 
 CREATE TABLE GOLDENSHOE_USER (id SERIAL PRIMARY KEY, fullname VARCHAR(60),email VARCHAR(60), password VARCHAR(60), address VARCHAR(100), basket VARCHAR(200), gdpr BOOLEAN DEFAULT FALSE);
+
+CREATE TABLE GOLDENSHOE_SHOES (id SERIAL PRIMARY KEY, shoe_name VARCHAR(60), shoe_colour VARCHAR(60), shoe_size NUMERIC(2, 0), shoe_description VARCHAR(100), shoe_stock NUMERIC(10, 0));
