@@ -98,14 +98,16 @@
   </div>
   <div class="right-half">
     <article>
-      <h2>Available Sizes:</h2>
+      <div class="availability-box cf">
+        <h2>Available Sizes:</h2>
       <p>
           <% @shoes.each do |shoe| %>
             <%if shoe.shoe_name == 'heel1' %>
-            <%= shoe.shoe_size %>
+            <span class="availability-sizes"><%= shoe.shoe_size %></span>
            <% end %>
         <% end %>
       </p>
+      </div>
     </article>
   </div>
 </section>

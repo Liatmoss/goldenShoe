@@ -126,3 +126,28 @@ a.signup-link:hover {
   right: 0px;
   width: 50%;
 }
+
+
+.availability-box .availability-sizes {
+  float: left;
+  display: block;
+  margin-right: 2.5641%;
+  width: 23.07692%;
+  border: black .125rem solid;
+  color: black;
+  margin: 2.5641% 2.5641% 0% 0%;
+  line-height: 1rem;
+  max-height: 1.875rem;
+  max-width: 3.125rem;
+  text-align: center;
+}
+
+.availability-box .availability-sizes:nth-child(3n+1) {
+  clear: left;
+}
+
+.availability-box .availability-sizes:hover, .availability-box .availability-sizes.selected {
+  border-color: black;
+  background: gold;
+  cursor: pointer;
+}
