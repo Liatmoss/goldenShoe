@@ -60,7 +60,10 @@ a.signup-link:hover {
   color: #0b0b0c;
 }
 
-footer {
+
+
+
+.footer {
   margin:0;
   width: 100%;
   bottom: 0;
@@ -104,8 +107,4 @@ footer {
 
 .footer-primary {
   background-color: #FFCE26;
-}
-
-.carousel-control-next, .carousel-control-prev {
-  color: black;
 }
