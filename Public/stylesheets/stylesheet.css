@@ -106,6 +106,6 @@ footer {
   background-color: #FFCE26;
 }
 
-.carousel-indicators {
-  
+.carousel-control-next, .carousel-control-prev {
+  color: black;
 }
