@@ -85,7 +85,31 @@
 <br>
 <br>
 
-
+<section class="container">
+  <div class="left-half">
+    <article>
+      <h2>Shoe Details:</h2>
+      <p>High heel, Round toe, Block heel, Slip on <br>
+        Upper: Leather<br>
+        Sole: Rubber<br>
+         Heel Height: 12 cm <br>
+         Platform Height: 2.5 cm</p>
+    </article>
+  </div>
+  <div class="right-half">
+    <article>
+      <h2>Available Sizes:</h2>
+      <p>
+          <% @shoes.each do |shoe| %>
+            <%if shoe.shoe_name == 'heel1' %>
+            <%= shoe.shoe_size %>
+           <% end %>
+        <% end %>
+      </p>
+    </article>
+  </div>
+</section>
+<br>
 
 <div class="container-100%">
   <footer class="footer-primary">

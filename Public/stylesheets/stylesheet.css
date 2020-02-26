@@ -70,6 +70,7 @@ a.signup-link:hover {
   padding: 10px 0;
   text-align: center;
   position: relative;
+  background-color: #FFCE26;
 }
 
 
@@ -107,4 +108,21 @@ a.signup-link:hover {
 
 .footer-primary {
   background-color: #FFCE26;
+}
+
+.container {
+  display: flex; /* or inline-flex */
+  flex-wrap: wrap;
+  justify-content: space-around;
+   align-items: flex-start;
+}
+
+.left-half {
+  left: 0px;
+  width: 50%;
+}
+
+.right-half {
+  right: 0px;
+  width: 50%;
 }

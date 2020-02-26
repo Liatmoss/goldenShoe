@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require_relative './lib/user'
+require_relative './lib/shoe'
 
 
 class GoldenShoe < Sinatra::Base
@@ -44,6 +45,9 @@ enable :sessions
   end
 
   get '/heel1' do
+    @shoes = Shoe.all
+    p "SHOESSSSS!!!!!!"
+    p @shoes
     erb :heel1
   end
 
