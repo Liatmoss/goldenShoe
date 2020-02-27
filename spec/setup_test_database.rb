@@ -2,12 +2,14 @@ require "db_connection"
 
 def setup_test_database
   DbConnection.setup(ENV["DB_NAME"])
-  DbConnection.query("TRUNCATE GOLDENSHOE_USER;")
-  # add_listings
+  DbConnection.query("TRUNCATE GOLDENSHOE_USER, GOLDENSHOE_ORDERS, GOLDENSHOE_SHOES;")
+  add_shoes
 end
 
-# def add_listings
-#   DbConnection.query("INSERT INTO rubynb_user (id, email, password) VALUES ('1', 'alistairphipps@gmail.com', 'password');")
-#   DbConnection.query("INSERT INTO listings (id, name, description, price, start_date, end_date, owner_id) VALUES ('1', 'Hotel California',
-#    'A lovely place to stay with lots of nice things like wifi and snacks', '1000.00', '2019-11-23', '2019-11-30', 1);")
-# end
+def add_shoes
+  DbConnection.query("INSERT INTO goldenshoe_shoes (id, shoe_name, shoe_colour, shoe_size, shoe_description, shoe_stock, shoe_price) VALUES ('1', 'heel1', 'black', 4, 'High heel, Round toe, Block heel, Slip on, Upper: Leather, Sole: Rubber, Heel Height: 12 cm, Platform Height: 2.5 cm', 100, 90.00);")
+  DbConnection.query("INSERT INTO goldenshoe_shoes (id, shoe_name, shoe_colour, shoe_size, shoe_description, shoe_stock, shoe_price) VALUES ('2', 'heel1', 'black', 5, 'High heel, Round toe, Block heel, Slip on, Upper: Leather, Sole: Rubber, Heel Height: 12 cm, Platform Height: 2.5 cm', 100, 90.00);")
+  DbConnection.query("INSERT INTO goldenshoe_shoes (id, shoe_name, shoe_colour, shoe_size, shoe_description, shoe_stock, shoe_price) VALUES ('3', 'heel1', 'black', 6, 'High heel, Round toe, Block heel, Slip on, Upper: Leather, Sole: Rubber, Heel Height: 12 cm, Platform Height: 2.5 cm', 0, 90.00);")
+  DbConnection.query("INSERT INTO goldenshoe_shoes (id, shoe_name, shoe_colour, shoe_size, shoe_description, shoe_stock, shoe_price) VALUES ('4', 'heel1', 'black', 7, 'High heel, Round toe, Block heel, Slip on, Upper: Leather, Sole: Rubber, Heel Height: 12 cm, Platform Height: 2.5 cm', 100, 90.00);")
+  DbConnection.query("INSERT INTO goldenshoe_shoes (id, shoe_name, shoe_colour, shoe_size, shoe_description, shoe_stock, shoe_price) VALUES ('5', 'heel1', 'black', 8, 'High heel, Round toe, Block heel, Slip on, Upper: Leather, Sole: Rubber, Heel Height: 12 cm, Platform Height: 2.5 cm', 0, 90.00);")
+end
