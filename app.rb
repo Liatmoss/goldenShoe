@@ -41,12 +41,25 @@ enable :sessions
 
   get '/signout' do
     session.clear
+    session[:signed_in] = false
     redirect '/'
   end
 
   get '/heel1' do
     @shoes = Shoe.all
     erb :heel1
+  end
+
+  post '/heel1' do
+    if session[:signed_in?] == true
+      redirect '/basket'
+    else
+      redirect '/login'
+    end
+  end
+
+  get '/basket' do
+    "Hello World"
   end
 
   run! if app_file == $0
