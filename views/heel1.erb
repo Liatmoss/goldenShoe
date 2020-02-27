@@ -104,12 +104,17 @@
         <h2>Available Sizes:</h2>
         <br>
       <p>
-        <form action="/weapon" method="post">
           <select name="size_choice">
           <% @shoes.each do |shoe| %>
             <%if shoe.shoe_name == 'heel1' %>
-            i = 0
-            <option value = i + 1 ><span class="availability-sizes"><%= shoe.shoe_size %></span></option>
+            <option value='<%= shoe.shoe_size %>'
+              <% if shoe.shoe_stock == '0' %>
+                  disabled>
+                <% else %>
+                  >
+              <% end %>
+              <%= shoe.shoe_size %>
+            </option>
            <% end %>
         <% end %>
         </select>
@@ -117,6 +122,7 @@
       </div>
       <br>
       <input type="submit" value="Add to basket">
+      </form>
       </center>
     </article>
   </div>
