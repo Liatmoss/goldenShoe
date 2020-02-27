@@ -98,16 +98,26 @@
   </div>
   <div class="right-half">
     <article>
+      <center>
+      <form method="post" action="/basket">
       <div class="availability-box cf">
         <h2>Available Sizes:</h2>
+        <br>
       <p>
+        <form action="/weapon" method="post">
+          <select name="size_choice">
           <% @shoes.each do |shoe| %>
             <%if shoe.shoe_name == 'heel1' %>
-            <span class="availability-sizes"><%= shoe.shoe_size %></span>
+            i = 0
+            <option value = i + 1 ><span class="availability-sizes"><%= shoe.shoe_size %></span></option>
            <% end %>
         <% end %>
+        </select>
       </p>
       </div>
+      <br>
+      <input type="submit" value="Add to basket">
+      </center>
     </article>
   </div>
 </section>
