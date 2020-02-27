@@ -46,8 +46,6 @@ enable :sessions
 
   get '/heel1' do
     @shoes = Shoe.all
-    p "SHOESSSSS!!!!!!"
-    p @shoes
     erb :heel1
   end
 
