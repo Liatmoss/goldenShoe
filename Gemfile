@@ -6,7 +6,8 @@ gem 'rake'
 gem 'rspec'
 gem 'sinatra'
 gem 'capybara'
-gem 'pg'
+gem 'pg', :group => :production
+gem 'sqlite3', :group => :development
 gem 'dotenv'
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
