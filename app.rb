@@ -66,7 +66,6 @@ enable :sessions
     @shoe = Shoe.all
     @user_order = Orders.user_id(user_id: session[:user_id].to_i)
     @shoe_info = Shoe.shoe_order(id: session[:shoe_id])
-    p @shoe_info
     erb :basket
   end
 
