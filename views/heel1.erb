@@ -35,6 +35,11 @@
         <li class="nav-item active">
           <a class="nav-link" href="#">Sale</a>
         </li>
+        <% if session[:signed_in?] == true %>
+        <li class="nav-item active">
+          <a class="nav-link" href="/basket">My Basket</a>
+        </li>
+        <% end %>
       </ul>
       <% if session[:signed_in?] == true %>
         <a class="nav-link" href="/signout">Sign out</a>
