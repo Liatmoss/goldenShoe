@@ -29,4 +29,19 @@ class Shoe
    end
   end
 
+  def self.select(shoe_size:)
+    DbConnection.setup(ENV["DB_NAME"])
+    p "shoe size input"
+    p shoe_size:
+    result = DbConnection.query("SELECT id FROM GOLDENSHOE_SHOES WHERE shoe_size = #{shoe_size};")
+      result.map do |shoes|
+        size = shoes.values_at("id")
+        return size.join.to_i
+      p "size"
+      p size
+      p "size as int"
+      p size.join.to_i
+    end
+  end
+
 end

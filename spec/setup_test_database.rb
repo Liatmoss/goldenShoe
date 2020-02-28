@@ -21,5 +21,5 @@ def add_user
 end
 
 def add_order
-    DbConnection.query("INSERT INTO goldenshoe_orders (shoe_id, user_id, guest) VALUES ('1', '1', 'false');")
+    DbConnection.query("INSERT INTO goldenshoe_orders (shoe_id, user_id) VALUES ('1', '1');")
 end

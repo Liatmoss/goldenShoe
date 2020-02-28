@@ -4,8 +4,9 @@ describe Orders do
 
   describe "add" do
     it 'creates a new order' do
-        orders = Orders.add(shoe_id: 1, user_id: 1, guest: 'false')
+        orders = Orders.add(shoe_id: 1, user_id: 1)
         expect(orders.shoe_id).to eq "1"
+        expect(orders.user_id).to eq "1"
       end
     end
 

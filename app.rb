@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require_relative './lib/user'
 require_relative './lib/shoe'
+require_relative './lib/orders'
 
 
 class GoldenShoe < Sinatra::Base
@@ -19,6 +20,8 @@ enable :sessions
   post '/login' do
     @user = User.authenticate(email: params['email'], password: params['password'])
     if @user
+      session[:email] = @user.email
+      session[:user_id] = @user.id
       session[:signed_in?] = true
       redirect '/'
     else
@@ -51,15 +54,19 @@ enable :sessions
   end
 
   post '/heel1' do
-    if session[:signed_in?] == true
-      redirect '/basket'
-    else
-      redirect '/login'
-    end
+    @shoe_size = params[:size_choice]
+    @shoe = Shoe.select(shoe_size: @shoe_size)
+    @order = Orders.add(shoe_id: @shoe, user_id: session[:user_id].to_i)
+    p "session user id"
+    p session[:user_id].to_i
+    p "order from db"
+    p @order
+    redirect '/basket'
+
   end
 
   get '/basket' do
-    "Hello World"
+    erb :basket
   end
 
   run! if app_file == $0

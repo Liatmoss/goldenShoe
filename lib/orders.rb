@@ -12,9 +12,9 @@ class Orders
     @guest = guest
   end
 
-  def self.add(shoe_id:, user_id:, guest:)
-    result = DbConnection.query("INSERT INTO GOLDENSHOE_ORDERS (shoe_id, user_id, guest) VALUES ('#{shoe_id}', '#{user_id}', '#{guest}') RETURNING id, order_date, shoe_id, user_id, guest;")
-    Orders.new(id: result[0]['id'], order_date: result[0]['order_date'], shoe_id: result[0]['shoe_id'], user_id: result[0]['user_id'], guest: result[0]['guest'])
+  def self.add(shoe_id:, user_id:)
+    result = DbConnection.query("INSERT INTO GOLDENSHOE_ORDERS (shoe_id, user_id) VALUES (#{shoe_id}, #{user_id}) RETURNING id, order_date, shoe_id, user_id, guest;")
+    new = Orders.new(id: result[0]['id'], order_date: result[0]['order_date'], shoe_id: result[0]['shoe_id'], user_id: result[0]['user_id'], guest: result[0]['guest'])
   end
 
   def self.all
