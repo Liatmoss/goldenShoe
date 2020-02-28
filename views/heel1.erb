@@ -8,7 +8,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
 
-  <title>Golden Shoe</title>
+  <title>Golden Shoe - Heel1</title>
 
   <link href="stylesheets/stylesheet.css" rel="stylesheet">
 
@@ -126,7 +126,11 @@
       </p>
       </div>
       <br>
+      <% if session[:signed_in?] == true %>
       <input type="submit" value="Add to basket">
+      <% else %>
+      <a href="/login" class="signup-link">Login to add items to basket</a>
+      <% end %>
       </form>
       </center>
     </article>
