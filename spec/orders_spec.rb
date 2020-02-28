@@ -16,4 +16,11 @@ describe Orders do
         expect(orders[0].user_id).to eq("1")
       end
     end
+
+    describe "order by user id" do
+      it "finds an order by user id" do
+        orders = Orders.user_id(user_id: 1)
+        expect(orders[0].shoe_id).to eq("1")
+      end
+    end
   end
