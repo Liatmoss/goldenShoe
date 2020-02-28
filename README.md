@@ -46,3 +46,5 @@ I want a link to relevant pages that I can easily find
 ### Database Setup:
 
 Follow instructions in db-setup
+
+Heroku link available at https://and-golden-shoe.herokuapp.com/
