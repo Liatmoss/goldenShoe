@@ -28,8 +28,8 @@ So that I can buy shoes,
 I want to be able to add shoes to my basket
 
 As a customer,
-So I can get a discount on my order,
-I want to add a discount code at checkout
+So that I can find details on delivery and returns,
+I want a link to relevant pages that I can easily find
 ```
 
 ## Running the Program

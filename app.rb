@@ -57,15 +57,16 @@ enable :sessions
     @shoe_size = params[:size_choice]
     @shoe = Shoe.select(shoe_size: @shoe_size)
     @order = Orders.add(shoe_id: @shoe, user_id: session[:user_id].to_i)
-    p "session user id"
-    p session[:user_id].to_i
-    p "order from db"
-    p @order
+    session[:shoe_id] = @shoe
     redirect '/basket'
-
   end
 
   get '/basket' do
+    @orders = Orders.all
+    @shoe = Shoe.all
+    @user_order = Orders.user_id(user_id: session[:user_id].to_i)
+    @shoe_info = Shoe.shoe_order(id: session[:shoe_id])
+    p @shoe_info
     erb :basket
   end
 

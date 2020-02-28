@@ -25,4 +25,12 @@ class Orders
     end
   end
 
+  def self.user_id(user_id:)
+    DbConnection.setup(ENV["DB_NAME"])
+    result = DbConnection.query("SELECT * FROM GOLDENSHOE_ORDERS WHERE user_id = #{user_id};")
+    result.map do |orders|
+      Orders.new(id: orders["id"], order_date: orders["order_date"], shoe_id: orders["shoe_id"], user_id: orders["user_id"], guest: orders["guest"])
+    end
+  end
+
 end
