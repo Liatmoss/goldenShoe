@@ -46,3 +46,11 @@ I want a link to relevant pages that I can easily find
 ### Database Setup:
 
 Follow instructions in db-setup
+
+### Viewing the website
+- Go to '/' to view homepage
+- Sign up by going to sign in and clicking on 'Not yet a member'
+- Click on the second image of high heel shoe under 'New Arrivals' or go to '/heel1'
+- To go back to homepage, click 'Golden Shoe' at the top left of the page
+- Select a size to add to basket - if you're not logged in it will take you to the login page
+- Click the 'Add to basket' button to view checkout page
